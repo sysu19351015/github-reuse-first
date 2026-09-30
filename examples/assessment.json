@@ -1,0 +1,22 @@
+{
+  "goal": "示例：开发一个处理 JSON 查询的工具（请替换为实际需求）",
+  "search_scope": "格式演示，尚未执行检索",
+  "candidates": [
+    {
+      "repository": "jmespath/jmespath.py",
+      "fit": "未知，需核实实际功能",
+      "gaps": "尚未读取源码与确认运行约束",
+      "effort": "未知",
+      "license_status": "needs_review",
+      "evidence": [
+        {
+          "claim": "需要读取固定版本的实现、README 和许可文件",
+          "url": "https://github.com/jmespath/jmespath.py",
+          "status": "unknown"
+        }
+      ]
+    }
+  ],
+  "recommendation": "尚未评估；此文件仅展示输入格式。",
+  "decision": "awaiting_selection"
+}
