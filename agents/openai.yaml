@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub 开源复用"
+  short_description: "开发插件或工具前检索 GitHub，比较开源项目并准备二次开发"
+  default_prompt: "请用 $github-reuse-first 为我要开发的插件或工具寻找 GitHub 开源实现，比较候选项目，并按我的选择准备二次开发。"
