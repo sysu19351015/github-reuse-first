@@ -106,6 +106,10 @@ python scripts/reuse.py --help
 
 测试只使用临时目录和模拟 HTTP，不访问 GitHub，不执行下载的第三方源码。实测范围见 [验证记录](docs/VALIDATION.md)。
 
+## 相近项目与本次改进
+
+已核查的相近技能、固定版本和许可限制见 [同类项目调研](docs/SIMILAR_PROJECTS.md)。1.1.0 补充：先核查现有代码与依赖、按组件缺口检索、按决策价值控制搜索投入、比较全周期接入成本，以及在实施中记录基线与最小端到端验收。未引入新的运行依赖或复制第三方实现。
+
 ## 参考与许可
 
 - [GitHub 搜索 API](https://docs.github.com/en/rest/search/search#search-repositories)

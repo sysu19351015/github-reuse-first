@@ -60,6 +60,8 @@ development-plan.md     源码检查后的改造与验证计划
 5. 安装、构建、测试、用户关键流程的验证方法，分清建议运行与已运行结果。
 6. 未解决差距、缺失文件、环境条件、需要用户决定的事项。
 
+实施验证应记录选定版本的原始基线和最小端到端验收：输入、预期输出、实际结果及环境。分别标识已通过、失败、未运行；若原始基线失败，说明是上游、环境还是改动导致，无法归因时写未知。接入方案同时交代新增依赖/服务、上游升级路径与未来替换成本。只要求调研或交接时列为建议验证，不为补齐报告擅自运行第三方代码。
+
 仅要求准备时交付可接手的源码和计划；已要求实际开发时计划是中间产物，继续实现并更新验证结果。
 
 inspect 额外生成 inspection.json、evidence/ 与 review.json。search 生成 search-results.json 与 search-results.md；report 保存 assessment.json 及 comparison.md。每一步使用不同的新子目录，按同一任务标识组织，不覆盖已存在输出。source_checks 中记录 git_blobs_verified、license_hashes_verified、tree_truncated，以及 Git 方式的 HEAD/remote/浅历史说明；runtime_checks 单独标识未运行或实际运行结果。

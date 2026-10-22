@@ -47,3 +47,15 @@ Git 获取首次出现网络失败，程序留下 failed 记录和本次目录�
 从 [CLI 参考](../references/cli.md) 选择全新输出目录执行 search、inspect、report、acquire、validate。要复现相同源码，inspect 时指定上述完整 commit；不要假定分支当前仍指向它。
 
 仅重跑离线测试无需网络、GitHub 凭据或安装第三方包。真实检索/获取受 GitHub 配额、认证与本地网络限制；遇到失败应查看记录，不把失败解释为项目不存在。
+
+## 1.1.0 复验（2026-10-22）
+
+本次修改技能工作流和参考文档，脚本仅同步版本号。相近项目证据和静态行为场景见 [同类项目调研](SIMILAR_PROJECTS.md)。
+
+- `python -m unittest discover -s tests -v`：37 项离线测试通过。
+- `skill-creator/scripts/quick_validate.py`：技能格式校验通过。
+- `python scripts/reuse.py --help`：五个子命令正常显示。
+- 候选技能仅阅读文件，未安装或执行；未重新运行历史记录中的真实源码获取流程。
+- 行为场景为静态走查，未做独立代理前向测试。
+
+复验环境补充：首次完整测试通过；同步版本号后，两次使用系统 Temp 的复跑在安装器目录 rename 处出现 Windows `WinError 5`。改用工作区临时目录（通过进程级 TEMP/TMP 设置）后 37 项通过。错误根因未确认，未改动安装逻辑。随后本地实际带备份升级成功，已安装版本为 1.1.0，安装后格式校验通过。
